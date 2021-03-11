@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">HW_3</string>
+    <string name="main_text_title">Бишкек</string>
+    <string name="main_title_h1">Кыргызстан</string>
+    <string name="main_text_time">10:00 AM</string>
+    <string name="main_text_date">10/01/2021</string>
+    <string name="main_text_tmp">-2 C</string>
+    <string name="tv_text_contacts">Здесь вы пишите номер телефона и нажимаете на кнопку сохранить, и вас перекидывает в "Телефон" с вашим введеным номером.</string>
+    <string name="tlb_title_city">Введите город</string>
+    <string name="tlb_title_contacts">Введите номер телефона</string>
+    <string name="tv_text_city">Здесь вы пишите город и сохраняете, и город возвращается и вставляется в предыдущий активити</string>
+    <string name="tv_text_google">Здесь вы пишите любое слово и нажимаете на "поиск" и вас перекидывает в браузер</string>
+</resources>

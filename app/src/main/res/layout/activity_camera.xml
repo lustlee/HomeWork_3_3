@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_camera">
+
+
+    <Toolbar
+        android:id="@+id/toolbar_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        app:theme="@style/Widget.AppCompat.Toolbar">
+
+        <ImageView
+            android:id="@+id/contacts_arrow_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/ic_baseline_chevron_left_24"
+            android:layout_marginRight="10dp"
+            />
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:text="Фото и видео"
+            android:textAllCaps="false"
+            android:textColor="@color/black" />
+    </Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_camera"
+        android:layout_width="360dp"
+        android:layout_height="200dp"
+        app:cardCornerRadius="2dp"
+        app:layout_constraintTop_toTopOf="@+id/toolbar_top"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintCircleRadius="4dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="4dp">
+
+        <ImageView
+            android:id="@+id/img_camera"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_baseline_camera_alt_24"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_top" />
+
+</androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_camera_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="10dp"
+        android:text="Фото"
+        android:backgroundTint="#5CFFEB3B"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/card_view_camera" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_video"
+        android:layout_width="360dp"
+        android:layout_height="200dp"
+        app:cardCornerRadius="2dp"
+        app:layout_constraintTop_toTopOf="@+id/btn_camera_video"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintCircleRadius="4dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="4dp">
+
+        <ImageView
+            android:id="@+id/img_video"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_baseline_videocam_24"
+            app:layout_constraintTop_toBottomOf="@id/img_video" />
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btn_video"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="20dp"
+        android:text="Видео"
+        android:backgroundTint="#5CFFEB3B"
+        android:textSize="20sp"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/card_view_video" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

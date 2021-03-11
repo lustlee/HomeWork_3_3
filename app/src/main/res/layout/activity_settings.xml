@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityCity">
+
+
+
+    <Toolbar
+        android:id="@+id/toolbar_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        app:theme="@style/Widget.AppCompat.Toolbar">
+
+        <ImageView
+            android:id="@+id/contacts_arrow_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/ic_baseline_chevron_left_24"
+            android:layout_marginRight="10dp"
+            />
+
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_gravity="center"
+            android:text="Введите запрос в Гугл"
+            android:textAllCaps="false"
+            android:textColor="@color/black" />
+    </Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view_city"
+        android:layout_width="360dp"
+        android:layout_height="300dp"
+        app:cardCornerRadius="2dp"
+        app:layout_constraintTop_toTopOf="@+id/toolbar_top"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintCircleRadius="4dp"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="4dp"
+        >
+
+        <EditText
+            android:id="@+id/et_city"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="10dp"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bg_textwiev"
+            android:hint="Введите ваш текст"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_top" />
+
+        <TextView
+            android:id="@+id/tv_contacts"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            android:text="@string/tv_text_google"
+            android:layout_marginTop="30dp"
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/btn_serch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#6BFB0101"
+        android:text="Поиск"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@id/card_view_city"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
